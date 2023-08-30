@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-function Countriesapi(){
+function Countriestable(){
 var [countries,setCountries]=React.useState([])
 React.useEffect(()=>{
     axios.get("https://restcountries.com/v3.1/all")
@@ -40,23 +40,12 @@ function sr(){
     setCountries([...s])
     
 }
-function search(){
-    var inp2=document.getElementById("inp2")
-    var temp=[...countries]
-    var s=temp.filter((country)=>{
-        return (country.name.common.toUpperCase().startsWith(inp2.value.toUpperCase()))
-        
-    })
-    setCountries([...s])
-    
-}
     return(
-    <div className="mybox">
+    <div>
         <button onClick={asc}>Ascending</button>
         <button onClick={des}>Descending</button>
         <input type="text" name="" id="inp1" />
         <button onClick={sr}>Search</button>
-        <input type="text" name="" id="inp2" onKeyUp={search} />
         <br></br>
        
         {
@@ -70,7 +59,7 @@ function search(){
         </div>
     )
 }
-export default Countriesapi;
+export default Countriestable;
 
 
 
