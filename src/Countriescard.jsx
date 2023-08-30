@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
-function Countriestable(){
+import 'bootstrap/dist/css/bootstrap.css';
+function Countriescard(){
 var [countries,setCountries]=React.useState([])
 React.useEffect(()=>{
     axios.get("https://restcountries.com/v3.1/all")
@@ -31,20 +32,20 @@ function des(){
   setCountries([...x])
 }
 function sr(){
-    var inp3=document.getElementById("inp3")
+    var inp5=document.getElementById("inp5")
     var temp=[...countries]
     var s=temp.filter((country)=>{
-        return (country.name.common.toUpperCase().startsWith(inp3.value.toUpperCase()))
+        return (country.name.common.toUpperCase().startsWith(inp5.value.toUpperCase()))
         
     })
     setCountries([...s])
     
 }
 function search(){
-    var inp4=document.getElementById("inp4")
+    var inp6=document.getElementById("inp6")
     var temp=[...countries]
     var s=temp.filter((country)=>{
-        return (country.name.common.toUpperCase().startsWith(inp4.value.toUpperCase()))
+        return (country.name.common.toUpperCase().startsWith(inp6.value.toUpperCase()))
         
     })
     setCountries([...s])
@@ -54,42 +55,36 @@ function search(){
     <div className="mybox">
         <button onClick={asc}>Ascending</button>
         <button onClick={des}>Descending</button>
-        <input type="text" name="" id="inp3" />
+        <input type="text" name="" id="inp5" />
         <button onClick={sr}>Search</button>
-        <input type="text" name="" id="inp4" onKeyUp={search} />
+        <input type="text" name="" id="inp6" onKeyUp={search} />
         <br></br>
-        <br></br>
-        <table border={2}>
-                    <thead>
-                        <tr>
-                        <th>Country Name</th>
-                        <th>Population</th>
-                        <th>Flag</th>
-                        </tr>
-                    </thead>
-                    <tbody>
                  {
                 countries.length>=0 && countries.map((country)=>{
-                return  <tr>
-                <td>{country.name.common}</td>
-                <td>{country.population}</td>
-                <td><img src={country.flags.svg} alt="" style={{width:"80px",padding:"5px"}}/></td>
-                </tr>
-                        
-                      })
-                    }
-                    </tbody>
-
-                 </table>
+                 return <div className="design" >
+                  <div class="card" style={{width:"18rem",height:"auto"}}>
+                 <img src={country.flags.svg} style={{width:"100%",padding:"5px"}} alt="" />
+                 <div class="card-body">
+                     <p><b>Country Name:</b>{country.name.common}</p>
+                     <p><b>Population:</b>{country.population}</p>
+                 </div>
+             </div>
+             </div>
+                 
+                 
+             
+                    
+                 
             
-        
+                })
+            }
      
         
         
         </div>
     )
 }
-export default Countriestable;
+export default Countriescard;
 
 
 
