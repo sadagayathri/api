@@ -5,6 +5,7 @@ import Countriescard from './Countriescard';
 import Countriestable from './Countriestable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Project from './Project';
+import Reviews from './Reviews';
 // import First from './First';
 // import Second from './Second';
 // import Third from './Third';
@@ -19,6 +20,7 @@ function App() {
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
       <Project></Project>
+      <Reviews></Reviews>
       {/* <First></First> */}
     </div>
     // </exContext.provider>
