@@ -3,6 +3,7 @@ import './App.css';
 import Countriesapi from './Countriesapi';
 import Countriescard from './Countriescard';
 import Countriestable from './Countriestable';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Project from './Project';
 // import First from './First';
 // import Second from './Second';
