@@ -2,7 +2,7 @@ import './App.css';
 import Countriesapi from './Countriesapi';
 import Countriescard from './Countriescard';
 import Countriestable from './Countriestable';
-import Project from './Project';
+// import Project from './Project';
 import Accordion from './Accordion';
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Countriesapi></Countriesapi>
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
-      <Project></Project>
+      {/* <Project></Project> */}
       <Accordion></Accordion>
     </div>
   );
