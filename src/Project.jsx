@@ -2,12 +2,16 @@ import React from "react";
 import axios from 'axios';
 
 function Project(){
-    var [tour,setTour]=React.useState([""])
+    var [tour,setTour]=React.useState([])
     React.useEffect(()=>{
         axios.get("https://course-api.com/react-tours-project")
         .then((res)=>{
-            console.log(res.data)
-            setTour([...res.data])
+            
+          var tour = res.data.map((y)=>{
+                return {...y,flag:false}
+            })
+            // console.log(res.data)
+             setTour([...tour])
         })
     },[])
     function notintrested(i){
@@ -15,8 +19,10 @@ function Project(){
         temp.splice(i,1)
         setTour([...temp])
     }
-    function readmore(len){
-       
+    function readmore(ind){
+       var temp=([...tour])
+       temp[ind].flag =! temp[ind].flag
+       setTour([...temp])
     }
     return(
         <div>
@@ -31,8 +37,8 @@ function Project(){
              <img src={place.image} style={{width:"auto",padding:"5px"}} alt="" />
              <div class="card-body" style={{width:"auto",padding:"5px"}}>
                  <span><p class="text-start" style={{fontSize:"20px"}}><b>{place.name}</b></p><p class="text-end"><span class="badge bg-secondary">{place.price}</span></p></span>
-                 <p>{place.info.slice(0,300)}
-                 <button onClick={()=>{readmore(place.info.length)}}>Read more</button></p>
+                 <p>{place.flag?place.info:place.info.slice(0,200)}
+                 <button onClick={()=>{readmore(i)}}>Read more</button></p>
                  <button onClick={()=>{notintrested(i)}} style={{borderColor:"red",color:"red"}}>Not intrested</button>
              </div>
              </div>
