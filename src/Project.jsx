@@ -38,7 +38,7 @@ function Project(){
              <div class="card-body" style={{width:"auto",padding:"5px"}}>
                  <span><p class="text-start" style={{fontSize:"20px"}}><b>{place.name}</b></p><p class="text-end"><span class="badge bg-secondary">{place.price}</span></p></span>
                  <p>{place.flag?place.info:place.info.slice(0,200)}
-                 <button onClick={()=>{readmore(i)}}>Read more</button></p>
+                 <button onClick={()=>{readmore(i)}}>{place.flag?"...Show Less":"...Read more"}</button></p>
                  <button onClick={()=>{notintrested(i)}} style={{borderColor:"red",color:"red"}}>Not intrested</button>
              </div>
              </div>
