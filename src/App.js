@@ -9,7 +9,7 @@ function App() {
       <Countriesapi></Countriesapi>
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
-      <Project h={"Best of Paris in 7 days tour"} mat={"Paris is synonymous with the finest things that culture can offer — in art,fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves<br></br> guide will immerse you in the very best of"}></Project>
+      <Project></Project>
     </div>
   );
 }
