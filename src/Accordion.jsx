@@ -35,7 +35,7 @@ function Accordion(){
      var q= questions.map((x)=>{
         return {...questions,status:false}
       })
-      setQuestions()
+      setQuestions([...q])
       function expand(i){
         var temp=([...questions])
         temp
