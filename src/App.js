@@ -3,6 +3,7 @@ import Countriesapi from './Countriesapi';
 import Countriescard from './Countriescard';
 import Countriestable from './Countriestable';
 import Project from './Project';
+import Accordion from './Accordion';
 function App() {
   return (
     <div className="mybox">
@@ -10,6 +11,7 @@ function App() {
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
       <Project></Project>
+      <Accordion></Accordion>
     </div>
   );
 }
