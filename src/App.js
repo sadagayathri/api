@@ -1,16 +1,26 @@
+import React, { useContext } from 'react';
 import './App.css';
 import Countriesapi from './Countriesapi';
 import Countriescard from './Countriescard';
 import Countriestable from './Countriestable';
 import Project from './Project';
+// import First from './First';
+// import Second from './Second';
+// import Third from './Third';
 function App() {
+  // var [xy,setXy]=React.useState(10)
+  // var ex=React.useContext("fvyuh")
   return (
+    
+    // <exContext.provider value={200}>
     <div className="mybox">
       <Countriesapi></Countriesapi>
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
       <Project></Project>
+      {/* <First></First> */}
     </div>
+    // </exContext.provider>
   );
 }
 
