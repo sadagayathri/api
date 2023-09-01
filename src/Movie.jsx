@@ -10,7 +10,7 @@ function Movie() {
     },[])
     return (
         <div>
-           hi 
+         
         </div>
     );
 }
