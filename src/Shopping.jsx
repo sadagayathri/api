@@ -18,11 +18,13 @@ function Shopping(){
     }
     function add(a){
         a.count++
-        setCart([...cart,a])
+        setCart([a])
+        setCart([...cart])
     }
     function sub(s){
         s.count--
-        setCart([...cart,s])
+        setCart([s])
+        setCart([...cart])
     }
     
     return(
