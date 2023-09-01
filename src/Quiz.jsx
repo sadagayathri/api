@@ -5,19 +5,19 @@ function Quiz() {
      var [n,setN]=React.useState([10])
      var inp=React.useRef()
      var sel=React.useRef()
-     var navigation=useNavigate();
+    //  var navigation=useNavigate();
      console.log( inp.current)
      React.useEffect(function(){
         inp.current.value=10
      },[])
-     function start(){
-        if(sel.current.value=="politics"){
-            <p>Can't Generate Questions, Please Try Different Options</p>
-        }
-        else{
-            navigation("/history")
-        }
-     }
+    //  function start(){
+    //     if(sel.current.value=="politics"){
+    //         <p>Can't Generate Questions, Please Try Different Options</p>
+    //     }
+    //     else{
+    //         navigation("/history")
+    //     }
+    //  }
     return (
         <center>
                     <div className='mybox1'>
@@ -40,7 +40,7 @@ function Quiz() {
             <br></br>
             <br></br>
             
-            <button style={{width:"300px"}} onClick={()=>{start()}}>Start</button>
+            <button style={{width:"300px"}}>Start</button>
         </div>
         </center>
     );
