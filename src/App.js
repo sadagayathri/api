@@ -6,9 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Shopping from './Shopping';
 import Project from './Project';
 import Movie from './Movie';
+import Quiz from './Quiz';
 function App() {
   return (
     <div className="mybox">
+      <Quiz></Quiz>
       <Movie></Movie>
       <Shopping></Shopping>
       <Countriesapi></Countriesapi>
