@@ -19,7 +19,7 @@ function App() {
       <Countriestable></Countriestable>
       <Countriescard></Countriescard>
       <Project></Project> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Routes>
         <Route path="/" element={<Quiz />}>
           
@@ -27,7 +27,7 @@ function App() {
           <Route path="history" element={<History />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
       
     </div>
   );
