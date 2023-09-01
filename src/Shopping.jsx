@@ -13,13 +13,14 @@ function Shopping(){
         
         product.count=1
         setCart([...cart,product])
+        
+        
     }
     function add(a){
         a.count++
         setCart([...cart,a])
     }
     function sub(s){
-       
         s.count--
         setCart([...cart,s])
     }
