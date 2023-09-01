@@ -29,8 +29,18 @@ function Shopping(){
         setCart([a])
         setCart([...cart])
     }
-    function sub(s){
-        s.count--
+    function sub(s,i){
+        // s.count--
+        console.log(i)
+        // var temp=[...cart]
+        // if(s.count<1){
+        //     return s.splice(i,1)
+        // }
+        // else{
+        //     return s.count--
+        // }
+        s.count<1?(s.splice(i,1)):(s.count--)
+        // // s.count<1?(cart.splice(i,1)):(s.count--)
         setCart([s])
         setCart([...cart])
     }
@@ -59,19 +69,19 @@ function Shopping(){
         <div className="w-50">
            <ul>
             {
-                cart.length>0 && cart.map((c)=>{  
+                cart.length>0 && cart.map((c,i)=>{  
                     return <div className="d-flex flex-wrap ">
-                          <div className="card" style={{width: "18rem"}}>
-                           <img src={c.image} class="card-img-top" alt="..." style={{width:"60px",height:"60px"}}/>
+                          <div className="card" style={{width: "40rem"}}>
+                           <img src={c.image} class="card-img-top" alt="..." style={{width:"70px",height:"70px"}}/>
                            {/* <b className="card-title">{c.title}</b>
                            <button onClick={()=>{add(c)}}>+</button>
                            <button onClick={()=>{sub(c)}}>-</button>
                            <p className="card-text"></p>{c.price} */}
                            <div className="card-body">
-                          <b className="card-title">{c.title}</b>
+                          <b className="card-title">{c.title}:{c.count}</b>
                           <button onClick={()=>{add(c)}}>+</button>
-                         <button onClick={()=>{sub(c)}}>-</button>
-                        <p className="card-text"></p>{c.price}
+                         <button onClick={()=>{sub(c,i)}}>-</button>
+                        <p className="card-text"></p><b>Rs:</b>{c.price}
                         </div>
                            </div>
                           
