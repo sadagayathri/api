@@ -5,9 +5,11 @@ import Countriestable from './Countriestable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Shopping from './Shopping';
 import Project from './Project';
+import Movie from './Movie';
 function App() {
   return (
     <div className="mybox">
+      <Movie></Movie>
       <Shopping></Shopping>
       <Countriesapi></Countriesapi>
       <Countriestable></Countriestable>
