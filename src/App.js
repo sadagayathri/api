@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './App.css';
-import Countriesapi from './Countriesapi';
-import Countriescard from './Countriescard';
-import Countriestable from './Countriestable';
+// import Countriesapi from './Countriesapi';
+// import Countriescard from './Countriescard';
+// import Countriestable from './Countriestable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Project from './Project';
 // import First from './First';
@@ -15,9 +15,9 @@ function App() {
     
     // <exContext.provider value={200}>
     <div className="mybox">
-      <Countriesapi></Countriesapi>
+      {/* <Countriesapi></Countriesapi>
       <Countriestable></Countriestable>
-      <Countriescard></Countriescard>
+      <Countriescard></Countriescard> */}
       <Project></Project>
       {/* <First></First> */}
     </div>
